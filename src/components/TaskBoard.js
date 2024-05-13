@@ -17,13 +17,12 @@ import {
 import axios from "axios";
 import DeleteIcon from "@mui/icons-material/Delete";
 import CommentSection from "./CommentSection";
+import { green, yellow, blue } from "@mui/material/colors";
 
 function TaskBoard() {
   const [tasks, setTasks] = useState([]);
-  console.log("🚀 ~ TaskBoard ~ tasks:", tasks);
   const [open, setOpen] = useState(false);
   const [users, setUsers] = useState([]);
-  console.log("🚀 ~ TaskBoard ~ users:", users);
   const [currentTask, setCurrentTask] = useState({
     title: "",
     description: "",
@@ -125,6 +124,19 @@ function TaskBoard() {
     }
   };
 
+  const getStatusColor = (status) => {
+    switch (status) {
+      case "To Do":
+        return yellow[600]; // Adjust the color as needed
+      case "In Progress":
+        return blue[300]; // Adjust the color as needed
+      case "Done":
+        return green[500]; // Adjust the color as needed
+      default:
+        return blue[100];
+    }
+  };
+
   return (
     <Container maxWidth="lg">
       <Typography variant="h4" style={{ margin: "20px 0" }}>
@@ -141,7 +153,13 @@ function TaskBoard() {
       <Grid container spacing={3}>
         {statuses.map((status) => (
           <Grid item xs={12} md={4} key={status}>
-            <Paper style={{ minHeight: 100, padding: 10 }}>
+            <Paper
+              style={{
+                minHeight: 100,
+                padding: 10,
+                backgroundColor: getStatusColor(status),
+              }}
+            >
               <Typography variant="h6">{status}</Typography>
               {tasks
                 .filter((task) => task.status === status)

@@ -1,7 +1,7 @@
+import { Container, Paper, Typography } from "@mui/material";
+import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { Container, Typography, Paper, TextField, Button } from "@mui/material";
-import axios from "axios";
 import CommentSection from "./CommentSection";
 
 function TaskDetails() {

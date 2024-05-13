@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import {
@@ -8,7 +9,6 @@ import {
   Button,
 } from "@mui/material";
 import axios from "axios";
-import TaskBoard from "./TaskBoard";
 import GroupTaskBoard from "./GroupTaskBoard";
 
 function GroupDetails() {

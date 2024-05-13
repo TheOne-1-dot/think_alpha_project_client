@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e6c13ad2.css",
+    "main.js": "/static/js/main.c6772e83.js",
+    "static/js/453.dbd462d0.chunk.js": "/static/js/453.dbd462d0.chunk.js",
+    "static/media/thinklogo.jpg": "/static/media/thinklogo.0757cb3161ffc6039420.jpg",
+    "index.html": "/index.html",
+    "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
+    "main.c6772e83.js.map": "/static/js/main.c6772e83.js.map",
+    "453.dbd462d0.chunk.js.map": "/static/js/453.dbd462d0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.c6772e83.js"
+  ]
+}

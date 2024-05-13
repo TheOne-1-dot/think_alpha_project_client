@@ -1,19 +1,18 @@
-import React, { useEffect, useState } from "react";
 import {
+  Autocomplete,
+  Chip,
   Container,
-  Grid,
-  Paper,
-  Button,
-  Typography,
   Dialog,
   DialogContent,
   DialogTitle,
-  TextField,
+  Grid,
   MenuItem,
-  Chip,
-  Autocomplete,
+  Paper,
+  TextField,
+  Typography
 } from "@mui/material";
 import axios from "axios";
+import React, { useEffect, useState } from "react";
 import CommentSection from "./CommentSection";
 
 function GroupTaskBoard({ tasks = [] }) {
@@ -44,15 +43,7 @@ function GroupTaskBoard({ tasks = [] }) {
     }
   };
 
-  const handleOpenForCreate = () => {
-    setCurrentTask({
-      title: "",
-      description: "",
-      status: "To Do",
-      assignee: "",
-    });
-    setOpen(true);
-  };
+
 
   const handleOpenForUpdate = (task) => {
     setCurrentTask(task);
