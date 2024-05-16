@@ -122,7 +122,8 @@ function TaskBoard() {
     } catch (error) {
       console.error("Failed to delete task:", error);
     }
-  };
+ 
+ };
 
   const getStatusColor = (status) => {
     switch (status) {
@@ -136,7 +137,6 @@ function TaskBoard() {
         return blue[100];
     }
   };
-
   return (
     <Container maxWidth="lg">
       <Typography variant="h4" style={{ margin: "20px 0" }}>
