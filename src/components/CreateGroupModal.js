@@ -83,7 +83,7 @@ function CreateGroupModal({ open, handleClose, fetchGroups, users, tasks }) {
           renderTags={(value, getTagProps) =>
             value.map((option, index) => (
               <Chip
-                key={option._id}
+                key={index}
                 label={option.name}
                 {...getTagProps({ index })}
               />
@@ -107,7 +107,7 @@ function CreateGroupModal({ open, handleClose, fetchGroups, users, tasks }) {
           renderTags={(value, getTagProps) =>
             value.map((option, index) => (
               <Chip
-                key={option._id}
+                key={index}
                 label={option.title}
                 {...getTagProps({ index })}
               />

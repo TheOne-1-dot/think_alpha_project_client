@@ -23,7 +23,10 @@ function CommentSection({ taskId }) {
   };
 
   useEffect(() => {
-    fetchComments(taskId);
+    if(taskId){
+
+      fetchComments(taskId);
+    }
   }, [taskId]);
 
   const addComment = async () => {
